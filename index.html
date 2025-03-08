@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<!-- 谢某人别瞎搞 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+    * {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+  
+  }
+  
+  body {
+      background-color: rgb(255, 247, 247);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+  }
+  .container {
+      position: relative;
+      width:100%;
+      max-width: 1000px;
+      min-height: 1000px;
+      background-color: #fff;
+      margin: 50px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+  
+  
+  }
+  
+  .container .leftSide {
+      position: relative;
+      background-color: rgb(126, 193, 241);
+      padding:40px;
+  }
+  
+  .profile {
+      position:relative;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  .profile img{
+      width:200px;
+      height:200px;
+      border-radius: 50%;
+  }
+  
+  .profile h2{
+      color: #fff;
+      font-size: 1em;
+      margin-top: 20px;
+      text-transform:uppercase;
+      text-align: center;
+      font-weight: 600;
+      line-height: 1.4em;
+  }
+  .profile h2 span {
+      font-size: 0.8em;
+      font-weight: 300;
+  }
+  
+  .contactInfo {
+      padding-top: 40px;
+  }
+  
+  .contactInfo .title {
+      color:#fff;
+      margin-bottom: 20px;
+  }
+  
+  .contactInfo ul {
+      position: relative;
+  }
+  .contactInfo ul li {
+      position: relative;
+      list-style: none;
+      margin: 10px 0;
+  
+  }
+  
+  /* 联系方式的地址 */
+  .contactInfo ul li .material-icons {
+       display: inline-block;
+       width: 40px;
+       font-size: 18px;
+       color: rgb(0, 132, 255);
+  }
+  
+  .contactInfo ul li .text {
+      color:#fff;
+  }
+  
+  .contactInfo ul li a {
+      text-decoration: none;
+      cursor: pointer;
+  }
+  
+  .contactInfo.education li {
+      margin-bottom: 15px;
+  }
+  
+  .contactInfo.education h5 {
+      color:rgb(255, 251, 251);
+  }
+  
+  .contactInfo.education h4 {
+      color:white;
+  }
+  
+  .contactInfo.language .percent {
+      position: relative;
+      width:100%;
+      height: 6px;
+      background-color: rgb(255, 255, 255);
+      display: block;
+      margin-top: 5px;
+  }
+  .contactInfo.language .percent div{
+      position: absolute;
+      top:0;
+      left:0;
+      height: 100%;
+      background-color: rgb(80, 130, 255);
+  }
+  
+  
+  .container .rightSide {
+      position: relative;
+      background-color: white;
+      padding:40px;
+  }
+  
+  .about {
+      margin-bottom: 50px;
+  }
+  
+  .about:last-child {
+      margin-bottom: 0;
+  }
+  /* 个人介绍 */
+  .title2 {
+      color:rgb(45, 99, 245);
+      margin-bottom: 10px;
+  }
+  
+  p {
+      color:#333;
+  }
+  
+  .about .box {
+      display: flex;
+      margin: 20px 0;
+  }
+  
+  .about .box .year-company {
+      min-width: 150px;
+  }
+  
+  .about .box .year-company h5 {
+      color:darkgray;
+  }
+  
+  .about .box .text h4 {
+      color:rgb(126, 180, 241);
+      font-size: 16px;
+  }
+  
+  .skills .box {
+      position:relative;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .skills .box h4 {
+      color:darkgrey;
+  }
+  
+  .skills .box .percent {
+      position: relative;
+      width: 100%;
+      height: 10px;
+      background-color: rgb(192, 239, 255);
+  }
+  
+  .skills .box .percent div {
+      position: absolute;
+      top:0;
+      left:0;
+      height: 100%;
+      background-color: rgb(80, 150, 255);
+  }
+  
+  .interest ul {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+  }
+  .interest ul li {
+      list-style: none;
+      color:#242424;
+      margin: 10px 0;
+  
+  }
+  
+  .interest ul li .material-icons {
+      color:rgb(91, 91, 91);
+      font-size: 20px;
+  }
+  
+  
+  @media (max-width:1000px) {
+  .container {
+      margin: 10px;
+      grid-template-columns: repeat(1,1fr);
+  }
+  .interest ul {
+      grid-template-columns: repeat(2,1fr);
+  }
+  
+  }
+  
+  @media (max-width:600px) {
+    .about .box {
+        flex-direction:column;
+  
+    }
+    .about .box .year-company{
+        margin-bottom: 5px;
+    }
+  .skills .box {
+      grid-template-columns: repeat(1,1fr);
+  }
+  .interest ul {
+      grid-template-columns: repeat(1,1fr);
+  }
+  }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="leftSide">
+           <div class="profile">
+               <img src="/xiebinxiang.io/this_is_xbi.jpg" alt="">
+               <h2>谢滨祥<br><span>不择手段地前进！</span></h2>
+           </div>
+           <div class="contactInfo">
+               <h3 class="title">联系方式</h3>
+               <ul>
+                   <li>
+                    <span class="material-icons">
+                        电话
+                        </span>
+                    <span class="text">137 3378 2912</span>
+                   </li>
+                   <li>
+                    <span class="material-icons">
+                        邮箱
+                        </span>
+                    <span class="text">binxiangxie@gmail.com</span>
+                   </li>
+                   <li>
+                    <span class="material-icons">
+                        地址
+                        </span>
+                    <span class="text">河南省平顶山市</span>
+                   </li>
+               </ul>
+           </div>
+           <div class="contactInfo education">
+               <h3 class="title">教育经历</h3>
+                 <ul>
+                     <li>
+                         <h5>2023-至今</h5>
+                         <h4>汝州职业技术学院</h4>
+                         <span class="text">信息工程系</span>
+                     </li>
+                 </ul>
+           </div>
+           <div class="contactInfo language">
+                <h3 class="title">自我评价</h3>
+                <ul>
+                    <li> <span class="text">熟练掌握编程语言、学习算法、机器学习等算法相关和软件
+                        </span> </li>
+                    <li> <span class="text">了解深度学习等
+                        具有一定的算法项目能力，有较好的编程水准</span> </li>
+                    <li> <span class="text">熟悉编程软件Pycharm和Anaconda,可配合做相对的编程工作</span> </li>
+                </ul>
+           </div>
+        </div>
+        <div class="rightSide">
+            <div class="about">
+                <h2 class="title2">个人介绍</h2>
+                <p>在校期间通过了学习具备了良好的科学素养，系统地，较好地掌握了数据结构，Linux操作系统，Python，C语言，深度学习，机器学习等，包括了计算机软件与应用的基本理论，基本知识和基本技能与多种实践方法</p >
+            </div>
+            <div class="about">
+                <h2 class="title2">项目经验</h2>
+                <div class="box">
+                    <div class="year-company">
+                        <h5>项目名字</h5>
+                        <h5>项目描述</h5>
+
+                    </div>
+                    <div class="text">
+                        <h4>人工智能算法与设计</h4>
+                        <p>通过YoloV5l模型半监督训练，对海量数据进行深入分析，有效提升了数据处理效率和准确性。</p >
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="year-company">
+                        <h5>项目名字</h5>
+                        <h5>项目描述</h5>
+
+                    </div>
+                    <div class="text">
+                        <h4>智能避让小车</h4>
+                        <p>针对Linux系统进行操作,将Linux中的C语言代码进行部分优化烧录至小车，成功提升了小车的稳定性和响应速度，极大改善了避让问题。</p >
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="year-company">
+                        <h5>项目名字</h5>
+                        <h5>项目描述</h5>
+                    </div>
+                    <div class="text">
+                        <h4>移动应用设计与开发</h4>
+                        <p>团队共同开发并优化了多个APP，在团队中显著提高团体合作了和运行能力，为团体领导提供了强有力的支持和经验。</p >
+                    </div>
+                </div>
+            </div>
+           <div class="about skills">
+                <h2 class="title2">专业技能</h2>
+                 <div class="box">
+                    <h4>HTML</h4>
+                    <div class="percent">
+                        <div style="width:95%"></div>
+                    </div>
+                 </div>
+                 <div class="box">
+                    <h4>Python</h4>
+                    <div class="percent">
+                        <div style="width:94%"></div>
+                    </div>
+                 </div>
+                 <div class="box">
+                    <h4>Java</h4>
+                    <div class="percent">
+                        <div style="width:92%"></div>
+                    </div>
+                 </div>
+                 <div class="box">
+                    <h4>Blender</h4>
+                    <div class="percent">
+                        <div style="width:90%"></div>
+                    </div>
+                 </div>
+                 <div class="box">
+                    <h4>Android Studio</h4>
+                    <div class="percent">
+                        <div style="width:85%"></div>
+                    </div>
+                 </div>
+                 <div class="box">
+                    <h4>小程序开发</h4>
+                    <div class="percent">
+                        <div style="width:80%"></div>
+                    </div>
+
+                 </div>
+           </div>
+           <div class="about interest">
+              <h2 class="title2">其他方面</h2>
+                <ul>
+                    <li>
+                        <span class="material-icons" style="vertical-align:-6px;">
+                            长视频剪辑
+                            </span>
+                    </li>
+                    <li>
+                        <span class="material-icons" style="vertical-align:-6px;">
+                            自媒体运营
+                            </span>
+                    </li>
+                    <li>
+                        <span class="material-icons" style="vertical-align:-6px;">
+                            数据标注
+                            </span>
+                    </li>
+                    <li>
+                        <span class="material-icons" style="vertical-align:-6px;">
+                            中国象棋
+                            </span>
+                    </li>
+                </ul>
+           </div>
+
+
+
+
+
+        </div>
+    </div>
+</body>
+</html>
